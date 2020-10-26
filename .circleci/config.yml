@@ -4,16 +4,15 @@ jobs:
     docker:  
       - image: circleci/node:lts
     steps: 
-      - checkout
       - run: 
           name: Build
-          command: npm install
+          command: echo "build"
       - run:
-          name: Run Unit Tests
-          command: npm run test
+          name: Run unit tests
+          command: echo "unit tests"
       - run:
           name: Deploy
           command: echo "deploy to host"
       - run:
-          name: Run Functional Tests
-          command: echo "functional tests"   
+          name: Run functional tests
+          command: echo "functional tests"
